@@ -1,106 +1,169 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Happy Birthday 💖</title>
-<style>
-body {
-  margin: 0;
-  font-family: 'Comic Sans MS', cursive;
-  background: linear-gradient(#ffd6e8, #fff6fa);
-  text-align: center;
-  color: #444;
-}
-#startBtn {
-  margin-top: 45vh;
-  padding: 22px 46px;
-  font-size: 24px;
-  border: none;
-  border-radius: 40px;
-  background: #ff8fb1;
-  color: white;
-  cursor: pointer;
-}
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-.popup-content {
-  background: white;
-  margin: 30% auto;
-  padding: 22px;
-  width: 80%;
-  border-radius: 20px;
-}
-.noteBox {
-  margin: 50px auto;
-  width: 85%;
-  background: #fff0f7;
-  padding: 25px;
-  border-radius: 30px;
-  font-size: 20px;
-  cursor: pointer;
-}
-.bigNote {
-  display: none;
-  margin: 20px;
-  padding: 24px;
-  background: white;
-  border-radius: 30px;
-}
-</style>
-</head>
+<div class="home">
+  <h1>🎉 Happy Birthday Lakshu Bbu 💓🎂</h1>
+  <button id="clickHereBtn">Click here 💓</button>
+</div>
 
-<body>
+<div class="popup" style="display:none;">
+  <img src="https://i.imgur.com/9yGzjUe.png" alt="Cute Cat 😺" class="cat-img">
+  <p>I have something for you 💗</p>
+  <button id="tellBtn">Tell me 🤌🏻</button>
+  <button id="notKnowBtn">Nahi janna 💢</button>
+</div>
 
-<button id="startBtn" onclick="openPopup()">click here 💓</button>
+<div class="happyPopup" style="display:none;">
+  <img src="https://i.imgur.com/L0Y3XoV.png" alt="Happy Cat 🎉" class="cat-img">
+  <p>Wishing you a very happy birthday! 🎈💓 Here's a cute joke 😸</p>
+  <button class="homeBtn">Back to Home 🏠</button>
+</div>
 
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <h2>😺🎉 Happy Birthday!</h2>
-    <p>Wishing you the cutest & happiest birthday 💖</p>
-    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="150"><br><br>
-    <button onclick="closePopup()">Yay 🥹</button>
+<div class="angryPopup" style="display:none;">
+  <img src="https://i.imgur.com/fyR2wUu.png" alt="Angry Cat 💢" class="cat-img">
+  <p>Go back 😺</p>
+  <button class="homeBtn">Back to Home 🏠</button>
+</div>
+
+<div class="noteSection" style="margin-top:50px;">
+  <h2>🐱 Tap Here 💗</h2>
+  <div class="noteBox">Click me 🎂</div>
+  <div class="noteContent" style="display:none;">
+    <p>Big Emotional Birthday Note 💓🎂👀</p>
   </div>
 </div>
 
-<audio id="music">
-  <source src="https://www.fesliyanstudios.com/play-mp3/387">
-</audio>
-
-<div class="noteBox" onclick="openNote()">
-  💌 Tap here to open your special birthday letter 🎀
-</div>
-
-<div class="bigNote" id="note">
-  <h2>💖 Happy Birthday 💖</h2>
-  <p>
-    Today is your day 🎂🌸  
-    May your heart stay soft, your smile stay bright ✨  
-    and your wishes always come true 🌈<br><br>
-    You are loved more than words can say 🤍💫
-  </p>
-  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200">
-</div>
-
-<script>
-function openPopup(){
-  document.getElementById("popup").style.display = "block";
-  document.getElementById("music").play();
+<div class="flipCards" style="margin-top:50px;">
+  <div class="card">
+    <div class="front">Song 1 🎵</div>
+    <div class="back">
+      <img src="https://i.imgur.com/1XzT0sJ.png" alt="Song 1">
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+  <div class="card">
+    <div class="front">Song 2 🎵</div>
+    <div class="back">
+      <img src="https://i.imgur.com/1XzT0sJ.png" alt="Song 2">
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+</div>body {
+  background: #ffe4e1; /* pastel pink */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 20px;
 }
-function closePopup(){
-  document.getElementById("popup").style.display = "none";
-}
-function openNote(){
-  document.getElementById("note").style.display = "block";
-  window.scrollTo(0,document.body.scrollHeight);
-}
-</script>
 
-</body>
-</html>
+h1, h2 {
+  font-size: 2em;
+  color: #ff69b4;
+}
+
+button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.cat-img {
+  width: 150px;
+  margin: 20px;
+}
+
+.noteBox {
+  background-color: #ffe4e1;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.flipCards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card {
+  perspective: 1000px;
+  width: 120px;
+  height: 150px;
+}
+
+.card .front, .card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  position: absolute;
+  top:0; left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.card .front {
+  background-color: #ff69b4;
+}
+
+.card .back {
+  background-color: #ffb6c1;
+  transform: rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}let clickHereBtn = document.getElementById('clickHereBtn');
+let popup = document.querySelector('.popup');
+let tellBtn = document.getElementById('tellBtn');
+let notKnowBtn = document.getElementById('notKnowBtn');
+let happyPopup = document.querySelector('.happyPopup');
+let angryPopup = document.querySelector('.angryPopup');
+let homeBtns = document.querySelectorAll('.homeBtn');
+
+clickHereBtn.onclick = () => {
+  document.querySelector('.home').style.display = 'none';
+  popup.style.display = 'block';
+};
+
+tellBtn.onclick = () => {
+  popup.style.display = 'none';
+  happyPopup.style.display = 'block';
+};
+
+notKnowBtn.onclick = () => {
+  popup.style.display = 'none';
+  angryPopup.style.display = 'block';
+};
+
+homeBtns.forEach(btn => {
+  btn.onclick = () => {
+    happyPopup.style.display = 'none';
+    angryPopup.style.display = 'none';
+    document.querySelector('.home').style.display = 'block';
+  };
+});
+
+let noteBox = document.querySelector('.noteBox');
+let noteContent = document.querySelector('.noteContent');
+
+noteBox.onclick = () => {
+  noteContent.style.display = 'block';
+};
